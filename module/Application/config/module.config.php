@@ -10,6 +10,18 @@
 namespace Application;
 
 return array(
+    'acl' => array(
+        'resources' => array(
+            'Application\Controller\Index.index',
+        ),
+        'privilege' => array(
+            'guest' => array(
+                'allow' => array(
+                    'Application\Controller\Index.index',
+                ),
+            ),
+        ),
+    ),
     'router' => array(
         'routes' => array(
             'home' => array(
